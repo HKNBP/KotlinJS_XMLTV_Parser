@@ -3,7 +3,7 @@ Parse XMLTV file on KotlinJS
 
 # Using
 ```
-XMLTV.parseXMLTV(src, epgID, fun(xmltv: XMLTV){
+XMLTV.parseXMLTV(xmltvSrc, epgID, fun(xmltv: XMLTV){
     //Do Something
     
     //Get XMLTV data
