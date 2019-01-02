@@ -1,4 +1,4 @@
-# KotlinJS_XMLTV_Parser
+# KotlinJS XMLTV Parser
 Parse XMLTV file on KotlinJS
 
 # Using
