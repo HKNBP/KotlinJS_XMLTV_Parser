@@ -1,15 +1,15 @@
 /*
- * KotlinJS_XMLTV_Parse is free software: you can redistribute it and/or modify
+ * KotlinJS_XMLTV_Parser is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * KotlinJS_XMLTV_Parse is distributed in the hope that it will be useful,
+ * KotlinJS_XMLTV_Parser is distributed in the hope that it will be useful,
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with KotlinJS_XMLTV_Parse.  If not, see <https://www.gnu.org/licenses/>.
+ * along with KotlinJS_XMLTV_Parser.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 import org.w3c.dom.Document
