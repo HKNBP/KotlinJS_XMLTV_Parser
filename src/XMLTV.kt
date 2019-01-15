@@ -182,10 +182,11 @@ open class XMLTV(
             fun getSeason(): Int?{
                 return when (system) {
                     "xmltv_ns" -> {
-                        episodeNum
+                        val number = episodeNum
                                 .split(".").getOrNull(0)
                                 ?.split("/")?.getOrNull(0)
                                 ?.toIntOrNull()
+                        if(number != null){number + 1}else{number}
                     }
                     /** 暫時只支援xmltv_ns系統, 其他有待研究
                     "onscreen" -> { null }
@@ -218,10 +219,11 @@ open class XMLTV(
             fun getEpisode(): Int?{
                 return when (system) {
                     "xmltv_ns" -> {
-                        episodeNum
+                        val number = episodeNum
                                 .split(".").getOrNull(1)
                                 ?.split("/")?.getOrNull(0)
                                 ?.toIntOrNull()
+                        if(number != null){number + 1}else{number}
                     }
                     /** 暫時只支援xmltv_ns系統, 其他有待研究
                     "onscreen" -> { null }
@@ -254,10 +256,11 @@ open class XMLTV(
             fun getPart(): Int?{
                 return when (system) {
                     "xmltv_ns" -> {
-                        episodeNum
+                        val number = episodeNum
                                 .split(".").getOrNull(2)
                                 ?.split("/")?.getOrNull(0)
                                 ?.toIntOrNull()
+                        if(number != null){number + 1}else{number}
                     }
                     /** 暫時只支援xmltv_ns系統, 其他有待研究
                     "onscreen" -> { null }
