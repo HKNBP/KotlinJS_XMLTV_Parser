@@ -178,7 +178,115 @@ open class XMLTV(
         class EpisodeNum(
                 val system: String                              = "",
                 val episodeNum: String                          = ""
-        )
+        ){
+            fun getSeason(): Int?{
+                return when (system) {
+                    "xmltv_ns" -> {
+                        episodeNum
+                                .split(".").getOrNull(0)
+                                ?.split("/")?.getOrNull(0)
+                                ?.toIntOrNull()
+                    }
+                    /** 暫時只支援xmltv_ns系統, 其他有待研究
+                    "onscreen" -> { null }
+                    "themoviedb.org" -> { null }
+                    "thetvdb.com" -> { null }
+                    "imdb.com" -> { null }
+                    */
+                    else -> {null}
+                }
+            }
+
+            fun getTotalSeason(): Int?{
+                return when (system) {
+                    "xmltv_ns" -> {
+                        episodeNum
+                                .split(".").getOrNull(0)
+                                ?.split("/")?.getOrNull(1)
+                                ?.toIntOrNull()
+                    }
+                    /** 暫時只支援xmltv_ns系統, 其他有待研究
+                    "onscreen" -> { null }
+                    "themoviedb.org" -> { null }
+                    "thetvdb.com" -> { null }
+                    "imdb.com" -> { null }
+                    */
+                    else -> {null}
+                }
+            }
+
+            fun getEpisode(): Int?{
+                return when (system) {
+                    "xmltv_ns" -> {
+                        episodeNum
+                                .split(".").getOrNull(1)
+                                ?.split("/")?.getOrNull(0)
+                                ?.toIntOrNull()
+                    }
+                    /** 暫時只支援xmltv_ns系統, 其他有待研究
+                    "onscreen" -> { null }
+                    "themoviedb.org" -> { null }
+                    "thetvdb.com" -> { null }
+                    "imdb.com" -> { null }
+                    */
+                    else -> {null}
+                }
+            }
+
+            fun getTotalEpisode(): Int?{
+                return when (system) {
+                    "xmltv_ns" -> {
+                        episodeNum
+                                .split(".").getOrNull(1)
+                                ?.split("/")?.getOrNull(1)
+                                ?.toIntOrNull()
+                    }
+                    /** 暫時只支援xmltv_ns系統, 其他有待研究
+                    "onscreen" -> { null }
+                    "themoviedb.org" -> { null }
+                    "thetvdb.com" -> { null }
+                    "imdb.com" -> { null }
+                    */
+                    else -> {null}
+                }
+            }
+
+            fun getPart(): Int?{
+                return when (system) {
+                    "xmltv_ns" -> {
+                        episodeNum
+                                .split(".").getOrNull(2)
+                                ?.split("/")?.getOrNull(0)
+                                ?.toIntOrNull()
+                    }
+                    /** 暫時只支援xmltv_ns系統, 其他有待研究
+                    "onscreen" -> { null }
+                    "themoviedb.org" -> { null }
+                    "thetvdb.com" -> { null }
+                    "imdb.com" -> { null }
+                    */
+                    else -> {null}
+                }
+            }
+
+            fun getTotalPart(): Int?{
+                return when (system) {
+                    "xmltv_ns" -> {
+                        episodeNum
+                                .split(".").getOrNull(2)
+                                ?.split("/")?.getOrNull(1)
+                                ?.toIntOrNull()
+                    }
+                    /** 暫時只支援xmltv_ns系統, 其他有待研究
+                    "onscreen" -> { null }
+                    "themoviedb.org" -> { null }
+                    "thetvdb.com" -> { null }
+                    "imdb.com" -> { null }
+                    */
+                    else -> {null}
+                }
+            }
+        }
         class Video(
                 val present: String                             = "",
                 val colour: String                              = "",
